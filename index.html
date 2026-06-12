@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            color: #000000;
+        }
+        
+        body {
+            background: #000000;
+            background-image: radial-gradient(circle at 50% 50%, #740c0c, #562e2e);
+            overflow: hidden;
+            header {
+                position: absolute;
+                left: 35%;
+                display: flex;
+                padding: 20px;
+                background: transparent;
+                 img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                h1 {
+                    font-size: 4rem;
+                    margin: 0;
+                    position: relative;
+                    top: 10px;
+                    color: #a403c0c5;
+                }
+            }
+
+            section {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            
+        .menu-canto{
+            position: fixed;
+            top:20px;
+            right:30px;
+            cursor: pointer;
+            user-select: none;
+                    color: #a403c0c5;
+                    font-size: 2rem;
+            
+        }
+        .op {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            width: 200px;
+            display: none;
+            z-index: 1000;
+            background: #060606;
+        }
+        .img-s {
+            position:absolute;
+            top: 30%;
+            left: 30%;
+           img {
+            width:35vw;
+            height: auto;
+            border-radius: 20px;
+            border:none;
+           }
+    }
+    .info {
+        position:absolute;
+        top: 30%;
+        left: 70%;
+    }
+    .Habilidades {
+        position:absolute;
+        top: 72%;
+        left: 41%;
+        .imgs {
+            position: relative;
+            right: 45%;
+            display: flex;
+            gap: 20px;
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                border:none;
+            }
+        }
+
+}
+.dificuldade { 
+    position:absolute;
+    top: 72%;
+    left: 70%;
+     ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        li {
+            width: 20px;
+            height: 20px;
+            background: #a403c0c5;
+            border-radius: 50%;
+        }
+     }
+}
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <header> 
+        <img src="./imagens site/shaco-shaco-lol.png" alt="Shaco">
+        <h1> Shaco </h1>
+    </header>
+   <section> 
+     <div class ="menu-canto" id="botaomenu">Skins</div>
+    <div class="op" id="painelmenu">
+        <ul> 
+            <li > <a href=""> Shaco </a></li>
+            <li > <a href=""> Shaco Chapeleiro Maluco </a></li>
+            <li > <a href=""> Shaco Bobo Da Corte </a></li>
+            <li > <a href=""> Shaco Quebra Nozes </a></li>
+            <li > <a href=""> Shaco De Brinquedo </a></li>
+        </ul>
+    </div>
+
+    <div class="img-s">
+        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_0.jpg" alt="">
+    </div>
+
+    <div class="info">
+         <h2> O Bufão Demoníaco </h2>
+        <p> Criado anos atrás como um brinquedo para um príncipe solitário, Shaco, a marionete encantada, agora se deleita com assassinatos e desordem. Corrompido por magia das trevas e pela perda de seu dono querido, o boneco que já fora gentil agora encontra prazer somente na miséria das próprias almas que ele atormenta. Ele usa brinquedos e truques simples para conseguir efeitos mortais, achando os resultados de seus “jogos” sangrentos hilários. E para aqueles que escutam uma risada sombria na calada da noite, o Bufão Demoníaco pode tê-los marcado como seu próximo brinquedo.</p>
+        
+    </div>
+
+    <div class="Habilidades"> 
+        <h1> Habilidades </h1>
+        <div class ="imgs"> 
+            <img src="./imagens site/Captura de tela 2026-06-12 102711.png" alt="">
+            <img src="./imagens site/cap 2.png" alt="">
+            <img src="./imagens site/cap 3.png " alt="">
+            <img src="./imagens site/cap 4.png" alt="">
+        </div>
+    </div>
+
+    <div class = "dificuldade"> 
+        <h1> Função</h1>
+        <p> Assassino </p>
+        <h1> Dificuldade </h1>
+        <ul> 
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+    </div>
+    
+   </section>
+</body>
+
+<script>
+  const botaomenu = document.getElementById('botaomenu');
+    const painelmenu = document.getElementById('painelmenu')
+
+    botaomenu.addEventListener('click', ()=> {
+        painelmenu.style.display = painelmenu.style.display === 'block' ? 'none' : 'block';
+    })
+    document.addEventListener('click', (event) => {
+        if (!botaomenu.contains(event.target) && !painelmenu.contains(event.target)) {
+            painelmenu.style.display = 'none';
+        }
+    });
+   
+
+</script>
+</html>
